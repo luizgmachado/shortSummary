@@ -1,0 +1,46 @@
+#form {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  
+}
+
+#form > input {
+ 
+  display: flex;
+  width: 45.2rem;
+  height: 4.8rem;
+  padding: 1.6rem 34.6rem 1.6rem 1.2rem;
+  
+  border: none;
+  border-radius: 0.5rem;
+  background: #202024;
+  color: #ffff;
+}
+
+#form > input:focus {
+  outline: 2px solid #8257E5;;
+}
+
+#form > button {
+  width: 4.8rem;
+  height: 4.8rem;
+  border: none;
+  padding: 1.2rem;
+  
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background: #8257E5;
+
+  transition: .1s;
+}
+
+#form > button:hover {
+  background: #BA30FF;
+  scale: 1.05;
+}
+
+#form > button > i {
+  color: #ffff;
+  font-size: 24px;
+}

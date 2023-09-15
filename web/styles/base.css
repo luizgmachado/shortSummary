@@ -32,3 +32,12 @@ body {
  
   color: #ffffff;
 }
+
+@media screen and (max-width: 429px ) {
+  body {
+    
+    font-size: 1.2rem;
+  }
+
+
+}

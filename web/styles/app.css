@@ -37,3 +37,45 @@ line-height: 100%; /* 3.4rem */
   color: #7C7C8A;
   user-select: none;
 }
+
+@media screen and (max-width: 429px) {
+  #app {
+  height: 100vh;
+  margin-top: -18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8.4rem 1.6rem;
+}
+
+#app > h1 {
+  margin: 1rem auto 2rem; /* Ajustei as margens para dispositivos móveis */
+  color: #996DFF;
+  font-size: 2.2rem; /* Tamanho de fonte reduzido para dispositivos móveis */
+  font-weight: bold;
+  line-height: 120%; /* Ajustei a altura da linha para dispositivos móveis */
+}
+
+#app > h2, #app > h3 {
+  align-self: flex-start;
+  margin-top: 2rem; /* Ajustei a margem para dispositivos móveis */
+  color: #FFF;
+  font-size: 1.6rem; /* Tamanho de fonte reduzido para dispositivos móveis */
+  font-weight: bold;
+  line-height: 120%; /* Ajustei a altura da linha para dispositivos móveis */
+}
+
+#app > p {
+  margin-top: 1rem; /* Ajustei a margem para dispositivos móveis */
+  align-self: flex-start;
+  width: 100%; /* Use a largura total para dispositivos móveis */
+  line-height: 1.6rem; /* Ajustei a altura da linha para dispositivos móveis */
+  text-align: justify;
+  
+}
+
+#app > .placeholder {
+  color: #7C7C8A;
+  user-select: none;
+}
+}

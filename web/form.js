@@ -2,8 +2,8 @@ import { server } from "./server.js"
 
 const form = document.querySelector("#form")
 const input = document.querySelector("#url")
-const content = document.querySelector("#content")
-const transcriptionElement = document.querySelector("#transcription");
+const content = document.querySelector("#content") //resumo
+const transcriptionElement = document.querySelector("#transcription");//transcrição
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault()
@@ -21,21 +21,22 @@ form.addEventListener("submit", async (event) => {
   const [_, params] = videoURL.split("/shorts/")
   const [videoID] = params.split("?si")
 
-  content.textContent = "Obtendo a transcrição do áudio..."
-  transcriptionElement.textContent = "Obtendo a transcrição do áudio..."
+  content.textContent = "Obtendo a transcrição do áudio..." //resumo
+  transcriptionElement.textContent = "Obtendo a transcrição do áudio..." //transcrição texto
 
   const transcription = await server.get("/summary/" + videoID)
 
-  content.textContent = "Realizando o resumo..."
-  transcriptionElement.textContent = "Realizando a transcrição..."
+  content.textContent = "Realizando o resumo..." //resumo texto
+  transcriptionElement.textContent = "Realizando a transcrição..." //transcrição texto
 
   const summary = await server.post("/summary", {
     text: transcription.data.result,
   })
 
-  content.textContent = summary.data.result
-  content.classList.remove("placeholder")
+  content.textContent = summary.data.result //resumo texto
+  content.classList.remove("placeholder") //resumo texto
 
-  transcriptionElement.textContent = transcription.data.result;
-  transcriptionElement.classList.remove("placeholder");;
+  transcriptionElement.textContent = transcription.data.result; //transcrição texto
+  transcriptionElement.classList.remove("placeholder"); //transcrição texto
+
 })

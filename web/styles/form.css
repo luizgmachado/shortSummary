@@ -43,3 +43,53 @@
   color: #ffff;
   font-size: 24px;
 }
+
+
+@media screen and (max-width: 429px) {
+
+#form {
+  display: flex;
+  flex-direction: column; /* Alterado para uma pilha de elementos para dispositivos móveis */
+  align-items: center; /* Centralize os elementos para dispositivos móveis */
+  gap: 1rem; /* Reduzi o espaço entre os elementos para dispositivos móveis */
+}
+
+#form > input {
+  width: 30rem; /* Use a largura total para dispositivos móveis */
+  height: 3.6rem; /* Reduzi a altura para dispositivos móveis */
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #202024;
+  color: #ffff;
+  font-size: 1.4rem; /* Tamanho de fonte reduzido para dispositivos móveis */
+}
+
+#form > input:focus {
+  outline: 2px solid #8257E5;
+}
+
+#form > button {
+  width: 100%; /* Use a largura total para dispositivos móveis */
+  height: 3.6rem; /* Reduzi a altura para dispositivos móveis */
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  background: #8257E5;
+  transition: 0.1s;
+}
+
+#form > button:hover {
+  background: #5f40a7;
+  transform: scale(1.00); /* Corrigi a propriedade de escala */
+}
+
+#form > button > i {
+  color: #ffff;
+  font-size: 1.6rem; /* Tamanho de fonte reduzido para dispositivos móveis */
+}
+}
+
+
+
